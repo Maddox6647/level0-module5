@@ -13,3 +13,4 @@ if __name__ == '__main__':
     #  3. If the number is divisible by any number other than 1 or itself,
     #     the number is not prime.
     pass
+
