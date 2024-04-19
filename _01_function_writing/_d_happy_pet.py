@@ -19,15 +19,28 @@ if __name__ == '__main__':
     window.withdraw()
     happy_level = 10
     print(happy_level)
-    k = simpledialog.askstring(title='g', prompt='what pet? a crocodile, a blue whale, or a kraken')
+    k = simpledialog.askstring(title='g', prompt='what sea pet? a crocodile, a blue whale, or a kraken')
     if k == 'crocodile':
         animal_pet = simpledialog.askstring(title='hi', prompt='give it lots of fish and other food, also lots of WATER!!!')
         if animal_pet == 'ok':
             happy_level = 12
             print(happy_level)
+            messagebox.showinfo(title='suspicious', message='croc loves u')
         elif animal_pet == 'no':
             happy_level = 0
             print(happy_level)
             messagebox.showinfo(title='bobby', message='THE CROC EATS U INSTEAD OF FISHIES')
     elif k == 'kraken':
         animals_suc = simpledialog.askstring(title='g', prompt='feed it fish and then watch it destroy everything')
+        if animals_suc == 'no':
+            happy_level = -10000000
+            print(happy_level)
+            messagebox.showinfo(title='y', message='KRAKEN KILLS YOU')
+        elif animals_suc == 'ok':
+            happy_level = 'uh ooohhhh...'
+            print(happy_level)
+            messagebox.showinfo(title='NO', message='i dont know why you just did that, better just to die...')
+    elif k == 'blue whale':
+        animal = simpledialog.askstring(title='l', prompt='feed it krill')
+        if animal == 'ok':
+            happy_level
