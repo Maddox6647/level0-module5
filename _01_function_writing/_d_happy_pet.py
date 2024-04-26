@@ -43,4 +43,5 @@ if __name__ == '__main__':
     elif k == 'blue whale':
         animal = simpledialog.askstring(title='l', prompt='feed it krill')
         if animal == 'ok':
-            happy_level
+            happy_level = '10'
+            print(happy_level)

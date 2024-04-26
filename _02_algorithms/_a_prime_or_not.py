@@ -2,6 +2,7 @@
 Write code that can tell if a number is prime.
 A prime number is a number that is only divisible by 1 and itself.
 """
+import random
 from tkinter import messagebox, simpledialog, Tk
 
 
@@ -12,5 +13,10 @@ if __name__ == '__main__':
     #     is prime.
     #  3. If the number is divisible by any number other than 1 or itself,
     #     the number is not prime.
-    pass
+
+
+
+    bobbyisanumber = simpledialog.askinteger(title='gjokp', prompt='enter a number')
+    if bobbyis
+
 
