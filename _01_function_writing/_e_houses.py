@@ -1,29 +1,45 @@
 """
 Have the turtle draw a row of houses.
 """
-from tkinter import messagebox, simpledialog, Tk,
+from tkinter import messagebox, simpledialog, Tk
 
 import turtle
 def draw_house(size):
     if size == 'small':
-        turtle_man.forward(60)
+        turtle_man.forward(25)
         turtle_man.right(90)
         turtle_man.forward(25)
         turtle_man.right(90)
-        turtle_man.forward(100)
-    if size == 'mega':
+        turtle_man.forward(25)
+        turtle_man.right(-90)
+        turtle_man.forward(10)
+        turtle_man.right(-90)
+
+    elif size == 'mega':
         turtle_man.forward(400)
         turtle_man.right(90)
-        turtle_man.forward(25)
+        turtle_man.forward(145)
         turtle_man.right(90)
-        turtle_man.forward(100)
+        turtle_man.forward(400)
+        turtle_man.right(-90)
+        turtle_man.forward(17)
+        turtle_man.right(-90)
+def draw_pointy_roof():
+    turtle_man.forward(10)
+    turtle_man.right(45)
+
+
+
 if __name__ == '__main__':
     turtle_man = turtle.Turtle()
-    for i in range(4):
-        turtle_man.right(90)
-        turtle_man.forward(10)
-        draw_house("small")
-        draw_pointy_roof()
+    turtle_man.penup()
+    turtle_man.goto(x=-400, y=-360)
+    turtle_man.left(90)
+    turtle_man.pendown()
+    size = simpledialog.askstring(title='r', prompt='small or mega')
+    for i in range(23):
+        draw_house(size)
+    draw_pointy_roof()
 
     # TODO)
     #   1) Move the turtle to the left side of the window near the bottom.
@@ -45,4 +61,4 @@ if __name__ == '__main__':
     #      (JUST the roof part): draw_pointy_roof, draw_flat_roof
     #   11) By calling the correct "roof" function, make large houses have
     #      flat roofs and all the others have pointy roofs.
-    pass
+
