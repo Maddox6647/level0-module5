@@ -4,33 +4,38 @@ Have the turtle draw a row of houses.
 from tkinter import messagebox, simpledialog, Tk
 
 import turtle
+def draw_pointy_roof():
+    turtle_man.right(-45)
+    turtle_man.forward(25)
+    turtle_man.right(90)
+    turtle_man.forward(25)
+    turtle_man.right(45)
 def draw_house(size):
+    turtle_man.pencolor('brown')
     if size == 'small':
         turtle_man.forward(25)
         turtle_man.right(90)
-        turtle_man.forward(25)
-        turtle_man.right(90)
+        draw_pointy_roof()
         turtle_man.forward(25)
         turtle_man.right(-90)
-        turtle_man.forward(10)
+        turtle_man.pencolor('green')
+        turtle_man.forward(19)
         turtle_man.right(-90)
 
     elif size == 'mega':
+        turtle_man.pencolor('brown')
         turtle_man.forward(400)
         turtle_man.right(90)
-        turtle_man.forward(145)
-        turtle_man.right(90)
+        draw_pointy_roof()
         turtle_man.forward(400)
         turtle_man.right(-90)
-        turtle_man.forward(17)
+        turtle_man.pencolor('green')
+        turtle_man.forward(19)
         turtle_man.right(-90)
-def draw_pointy_roof():
-    turtle_man.forward(10)
-    turtle_man.right(45)
-
-
 
 if __name__ == '__main__':
+    window = Tk()
+    window.withdraw()
     turtle_man = turtle.Turtle()
     turtle_man.penup()
     turtle_man.goto(x=-400, y=-360)
@@ -38,8 +43,10 @@ if __name__ == '__main__':
     turtle_man.pendown()
     size = simpledialog.askstring(title='r', prompt='small or mega')
     for i in range(23):
+        size = simpledialog.askstring(title='r', prompt='small or mega')
         draw_house(size)
-    draw_pointy_roof()
+
+    window.mainloop()
 
     # TODO)
     #   1) Move the turtle to the left side of the window near the bottom.

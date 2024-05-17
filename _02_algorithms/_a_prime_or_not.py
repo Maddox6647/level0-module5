@@ -17,6 +17,6 @@ if __name__ == '__main__':
 
 
     bobbyisanumber = simpledialog.askinteger(title='gjokp', prompt='enter a number')
-    if bobbyis
+    if bobbyisanumber
 
 
