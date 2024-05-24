@@ -13,10 +13,13 @@ if __name__ == '__main__':
     #     is prime.
     #  3. If the number is divisible by any number other than 1 or itself,
     #     the number is not prime.
+    window = Tk()
+    window.withdraw()
 
-
-
-    bobbyisanumber = simpledialog.askinteger(title='gjokp', prompt='enter a number')
-    if bobbyisanumber
-
+    bobby = simpledialog.askinteger(title='hi', prompt='enter a number greater than 1')
+    if bobby < 2:
+        exit()
+    for i in range(2, bobby):
+        if bobby % i == 0:
+            print('not prime mister no brain')
 
