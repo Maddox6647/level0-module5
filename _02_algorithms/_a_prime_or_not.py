@@ -21,5 +21,7 @@ if __name__ == '__main__':
         exit()
     for i in range(2, bobby):
         if bobby % i == 0:
-            print('not prime mister no brain')
+            messagebox.showinfo(title='sh', message=str(bobby)+ ' is not prime mister nno brain')
+            exit()
+    messagebox.showinfo(title='g', message=str(bobby)+ ' is prime')
 
