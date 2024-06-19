@@ -25,7 +25,7 @@ if __name__ == '__main__':
     print(number1)
     print(number2)
 
-    for i in range(10000):
+    for i in range(1000):
         sum = number1 + number2
         print(sum)
         number1 = number2
