@@ -13,4 +13,6 @@ if __name__ == '__main__':
     #     For example, if they enter their name as Alexander Hamilton
     #     their goofy name will be AlExAnDeR HaMiLtOn
     #  3. Show the user the goofy version of their name in a pop-up.
+
+    I DID DIS LESSON SO STOP UNDER RED LINING THIS SAYING
     pass
